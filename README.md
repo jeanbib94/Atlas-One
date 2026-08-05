@@ -67,3 +67,19 @@
    ```bash
    git clone [https://github.com/jeanbib94/Atlas-One.git](https://github.com/jeanbib94/Atlas-One.git)
    cd Atlas-One
+
+
+## 🗺️ Roadmap du Projet
+
+| Phase | Objectif |
+| :---: | :--- |
+| **0** | **Environnement** (Linux, Git, VS Code, Docker) |
+| **1** | **Python & C++** (Bases orientées objet, gestion mémoire) |
+| **2** | **Linux** (Ligne de commande, gestion des processus, permissions) |
+| **3** | **ROS 2** (Nodes, Topics, Services, Actions, Colcon) |
+| **4** | **Robot Mobile** (Modélisation URDF, simulation Gazebo) |
+| **5** | **Vision** (OpenCV, traitement d'image, caméras RGB-D) |
+| **6** | **IA** (PyTorch, détection d'objets YOLO, classification) |
+| **7** | **Navigation** (SLAM, cartographie, Nav2, planification de trajectoire) |
+| **8** | **Manipulation** (Bras robotique, MoveIt 2, cinématique) |
+| **9** | **Projet Final** (Intégration complète Hardware-in-the-Loop) |
