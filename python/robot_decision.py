@@ -6,9 +6,12 @@ distance_obstacle = float(input("Entrez la distance à l'obstacle le plus proche
 if battery < 10 or temperature > 70 or distance_obstacle < 20:
     print("Arrêt d'urgence.")
 else : 
+    alerte = False
     if battery < 20:
         print("Alerte: Niveau de batterie faible.")
+        alerte = True
     if distance_obstacle < 50:
         print("Alerte: Obstacle détecté.")
-    else:
+        alerte = True
+    if not alerte:
         print("Mission autorisée.")
