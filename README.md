@@ -83,3 +83,27 @@
 | **7** | **Navigation** (SLAM, cartographie, Nav2, planification de trajectoire) |
 | **8** | **Manipulation** (Bras robotique, MoveIt 2, cinématique) |
 | **9** | **Projet Final** (Intégration complète Hardware-in-the-Loop) |
+
+
+## 🛠️ Configuration de l'environnement
+
+Afin de maintenir un environnement propre et isolé, le projet utilise un environnement virtuel Python.
+
+bash
+# Création de l'environnement virtuel
+python3 -m venv .venv
+
+# Activation de l'environnement virtuel
+source .venv/bin/activate
+
+🚀 Scripts disponibles
+1. Présentation du Robot (python/presentation.py)
+Affiche la carte d'identité du robot Atlas One, la version exacte de Python exécutée via le module platform et la date du jour.Bashpython3 python/presentation.py
+2. Infos & Calcul de Distance (python/robot_info.py)Calcule la distance parcourue à partir de données physiques de vitesse ($1.25\text{ m/s}$) et de temps ($240\text{ s}$).Bashpython3 python/robot_info.py
+3. Système de Prise de Décision (python/robot_decision.py)Évalue la sécurité du robot selon plusieurs paramètres (batterie, température, distance d'obstacle).Arrêt d'urgence prioritaire si les seuils critiques sont dépassés.Cumul des alertes secondaires si plusieurs avertissements sont levés simultanément.Bashpython3 python/robot_decision.py
+4. Assistant de Décollage Drône (python/drone_check.py)Contrôle les conditions avant de passer en vol : vitesse du vent, batterie minimale et disponibilité du GPS.Convertit les réponses textuelles (oui/non) en valeurs booléennes (True/False).Bashpython3 python/drone_check.py
+5. Patrouille & Gestion de Batterie (python/robot_patrol.py)Simule la mission de patrouille du robot à l'aide d'une boucle while.Consommation de $7\%$ de batterie par déplacement.Interruption automatique et retour à la station de recharge dès que le niveau repasse sous les $20\%$.Bashpython3 python/robot_patrol.py
+
+<p align="center">
+  <img src="assets/demo_robot_patrol.png" alt="Aperçu du script" width="600"/>
+</p>
